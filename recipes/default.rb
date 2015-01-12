@@ -24,3 +24,21 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+packages = %w(
+  httpd
+)
+packages.each do |p|
+  package p do
+  end
+end
+
+# Setup apache
+service 'httpd' do
+  supports :status => true, :restart => true, :reload => true
+  action [:enable, :start]
+end
+
+template '/etc/httpd/conf/httpd.conf' do
+  source 'httpd.conf.erb'
+  notifies :restart, 'service[httpd]'
+end
