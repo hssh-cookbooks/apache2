@@ -1,0 +1,8 @@
+name             'apache2'
+maintainer       'Hisashi KOMINE'
+maintainer_email 'hssh@hssh.jp'
+license          'mit'
+description      'Installs/Configures apache2'
+long_description 'Installs/Configures apache2'
+version          '0.1.0'
+supports         'centos', '7.0'
