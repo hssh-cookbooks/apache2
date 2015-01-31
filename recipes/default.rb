@@ -26,7 +26,6 @@
 
 packages = %w(
   httpd
-  httpd-devel
 )
 packages.each do |p|
   package p do
