@@ -40,6 +40,6 @@ service 'httpd' do
 end
 
 template '/etc/httpd/conf/httpd.conf' do
-  source 'httpd.conf.erb'
+  source 'apache2.conf.erb'
   notifies :restart, 'service[httpd]'
 end
